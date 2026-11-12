@@ -1,0 +1,51 @@
+:root{--dark:#243b31;--green:#4e8060;--light:#a9c994;--cream:#f5efd9;--red:#cb5048;--yellow:#f0c665}
+    *{box-sizing:border-box}body{margin:0;color:var(--dark);font-family:'Work Sans',sans-serif;background-color:#a9c994;background-image:linear-gradient(45deg,#243b310d 25%,transparent 25%,transparent 75%,#243b310d 75%),linear-gradient(45deg,#243b310d 25%,transparent 25%,transparent 75%,#243b310d 75%);background-position:0 0,8px 8px;background-size:16px 16px}
+    .pixel{font-family:'Press Start 2P',monospace;line-height:1.65}.shell{width:100%;min-height:100%;padding:22px}.frame{max-width:1320px;margin:auto;background:var(--cream);border:5px solid var(--dark);box-shadow:9px 9px 0 #243b3160}
+    .top{background:var(--dark);color:var(--cream);padding:20px 26px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:14px}.ball{width:38px;height:38px;flex:none;border:4px solid var(--dark);border-radius:50%;background:linear-gradient(var(--red) 0 44%,var(--dark) 44% 56%,#fff 56%);position:relative;box-shadow:0 0 0 2px var(--cream)}.ball:after{content:'';position:absolute;width:12px;height:12px;background:#fff;border:3px solid var(--dark);border-radius:50%;top:9px;left:9px}
+    nav{display:flex;flex-wrap:wrap;gap:8px}.navbtn{border:2px solid #91ae94;color:#fff;background:transparent;padding:10px 12px;font-size:10px}.navbtn.active,.navbtn:hover{background:var(--yellow);color:var(--dark);border-color:var(--yellow)}
+    button{cursor:pointer;transition:transform .12s,box-shadow .12s}button:active{transform:translate(2px,2px);box-shadow:none!important}button:disabled{cursor:wait;opacity:.55}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+    .screen{padding:28px}.panel{border:3px solid var(--dark);background:#fffdf4;box-shadow:5px 5px 0 #243b3126;padding:22px}.title{font-size:clamp(15px,2.5vw,27px);margin:0 0 16px}.eyebrow{font-size:9px;color:var(--green);margin-bottom:12px}.lead{font-size:17px;max-width:680px;line-height:1.6}
+    .btn{border:3px solid var(--dark);background:var(--yellow);color:var(--dark);padding:12px 15px;font-family:'Press Start 2P',monospace;font-size:10px;line-height:1.5;box-shadow:4px 4px 0 var(--dark)}.btn.red{background:var(--red);color:white}.btn.green{background:var(--green);color:white}.btn.ghost{background:#fffdf4}.btn.small{font-size:9px;padding:8px 10px;box-shadow:2px 2px 0 var(--dark)}
+    .field{width:100%;border:3px solid var(--dark);background:white;padding:12px;font:600 15px 'Work Sans',sans-serif;color:var(--dark)}label{font-weight:800;display:block;margin-bottom:7px}.section{display:none}.section.active{display:block}.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:stretch}.hero-art{background:repeating-linear-gradient(0deg,#86af78,#86af78 15px,#92b884 15px,#92b884 30px);display:grid;place-items:center;min-height:270px;position:relative;overflow:hidden}.hero-art:before{content:'';position:absolute;width:210px;height:210px;border-radius:50%;background:#f5efd969;border:5px solid #243b3122}.hero-art img{position:relative;width:190px;height:190px;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(8px 10px 0 #243b3140)}
+    .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:17px}.poke-card{border:3px solid var(--dark);background:#fffdf4;box-shadow:4px 4px 0 #243b3129;padding:12px;min-width:0}.sprite-box{background:#dcebcf;border:2px solid var(--dark);display:grid;place-items:center;height:130px;width:100%;cursor:pointer}.sprite-box img{width:112px;height:112px;object-fit:contain;image-rendering:pixelated}.card-name{font-size:11px;margin:12px 0 8px;overflow-wrap:anywhere}.num{font-family:'Press Start 2P';font-size:9px;color:#50755a}.pill{display:inline-block;padding:5px 8px;background:#dcebcf;border:1px solid var(--dark);font-size:11px;font-weight:800;margin:3px 3px 3px 0;text-transform:capitalize}.bar{height:13px;background:#dce1cf;border:2px solid var(--dark);overflow:hidden}.bar>span{display:block;height:100%;background:var(--green)}.stat-row{display:grid;grid-template-columns:125px 42px 1fr;align-items:center;gap:10px;margin:10px 0;font-size:12px;font-weight:700}
+    .detail-grid{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:24px}.detail-img{background:#dcebcf;border:3px solid var(--dark);display:grid;place-items:center;min-height:260px}.detail-img img{width:min(240px,90%);height:240px;object-fit:contain;image-rendering:pixelated}.evo-list{display:flex;flex-wrap:wrap;gap:12px}.evo-item{border:2px solid var(--dark);background:#e6efd9;padding:8px;text-align:center;min-width:100px}.evo-item img{width:70px;height:70px;object-fit:contain;image-rendering:pixelated;margin:auto}.notice{padding:14px;border:2px solid var(--dark);background:#f6dca3;margin:16px 0;font-weight:700}.battle-stage{background:#d9e9cb;border:3px solid var(--dark);padding:18px}.fighter{background:#fffdf4;border:2px solid var(--dark);padding:12px;display:flex;align-items:center;gap:12px;min-width:0}.fighter img{width:94px;height:94px;image-rendering:pixelated;object-fit:contain}.fighter-info{flex:1;min-width:0}.log{height:130px;overflow:auto;background:#fffdf4;border:2px solid var(--dark);padding:10px;font-size:13px;line-height:1.6}.log p{margin:0 0 5px}.compare-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}.compare-card img{width:120px;height:120px;object-fit:contain;image-rendering:pixelated;margin:auto}.footer{border-top:3px solid var(--dark);padding:16px 28px;background:#e5e9cf;font-size:12px}
+    @media(max-width:760px){.shell{padding:9px}.screen{padding:17px}.top{padding:17px}.hero,.detail-grid,.compare-cols{grid-template-columns:1fr}.stat-row{grid-template-columns:95px 32px 1fr;gap:6px}.cards{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}.panel{padding:16px}.navbtn{font-size:8px;padding:8px}}
+    @media(prefers-reduced-motion:reduce){button{transition:none}}
+    .battle-stage{background:linear-gradient(#e9f2d8 0 42%,#c9ddaF 42%);padding:clamp(12px,3vw,24px)}
+    .battle-fighters{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:end}
+    .fighter{min-height:145px;transition:border-color .2s,box-shadow .2s,transform .2s}
+    .fighter.is-active{border:3px solid var(--red);box-shadow:0 0 0 4px #cb504833,5px 5px 0 #243b3126;transform:translateY(-3px)}
+    .fighter.is-defeated{animation:knockout .65s steps(4,end) forwards}
+    .fighter img{flex:none;transition:filter .25s,transform .25s}
+    .fighter-info .pixel{font-size:clamp(8px,1.3vw,11px);overflow-wrap:anywhere}
+    .fighter-info small{display:block;margin-top:6px;font-weight:800}
+    .hp-line{display:flex;justify-content:space-between;gap:8px;margin-top:10px;font-size:12px;font-weight:800}
+    .hp-line .bar{flex:1}
+    .bar>span{transition:width .65s ease;background:#63a84d}
+    .bar>span.hp-low{background:#cb5048}
+    .battle-stage .bar>span.hp-mid{background:#e5b638}
+    #turn-label{min-height:44px;padding:12px;background:#fffdf4;border:2px solid var(--dark);font-size:clamp(9px,1.5vw,12px);text-align:center}
+    #turn-label.turn-player-1{border-color:#d94d43;box-shadow:inset 0 0 0 2px #d94d4330}
+    #turn-label.turn-player-2{border-color:#3a77c5;box-shadow:inset 0 0 0 2px #3a77c530}
+    .move-area{border:2px solid var(--dark);background:#fffdf4;padding:16px;margin:16px 0}
+    .move-heading{font-size:10px;margin:0 0 12px}
+    .move-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .move-button{--move-color:#7b8b8b;min-height:74px;border:3px solid var(--dark);border-left:9px solid var(--move-color);background:#fff;color:var(--dark);padding:9px;text-align:left;box-shadow:3px 3px 0 #243b3133;transition:transform .12s,filter .12s,box-shadow .12s}
+    .move-button:hover,.move-button:focus-visible{filter:brightness(.94);transform:translateY(-2px);box-shadow:4px 5px 0 #243b3155}
+    .move-button:disabled{cursor:not-allowed;filter:grayscale(.8);opacity:.5}
+    .move-name{display:block;font-family:'Press Start 2P',monospace;font-size:8px;line-height:1.55;overflow-wrap:anywhere}
+    .move-meta{display:flex;justify-content:space-between;align-items:center;gap:5px;margin-top:7px;font-size:10px;font-weight:800}
+    .move-type{display:inline-block;background:var(--move-color);color:#fff;border:1px solid #243b31;padding:3px 5px;font-size:9px;text-transform:uppercase}
+    .move-info{min-height:52px;margin-top:12px;padding:10px;background:#e6efd9;border:2px solid #8da381;font-size:12px;line-height:1.5}
+    .move-info strong{color:var(--dark)}
+    .battle-log{margin-top:16px}
+    .type-normal{--move-color:#9b9b6e}.type-fire{--move-color:#e66a35}.type-water{--move-color:#4e8acb}.type-electric{--move-color:#d6ad24}.type-grass{--move-color:#62a94d}.type-ice{--move-color:#62b7bd}.type-fighting{--move-color:#b44c43}.type-poison{--move-color:#9a59a1}.type-ground{--move-color:#bd8c48}.type-flying{--move-color:#8f82c8}.type-psychic{--move-color:#d35b84}.type-bug{--move-color:#8a9b32}.type-rock{--move-color:#9a8544}.type-ghost{--move-color:#68558c}.type-dragon{--move-color:#6951d1}.type-dark{--move-color:#66534b}.type-steel{--move-color:#71858e}.type-fairy{--move-color:#ce80a4}
+    .fighter.is-attacking img{animation:attack-lunge .34s steps(3,end)}
+    .fighter.is-hit img{animation:hit-flash .42s steps(2,end)}
+    .fighter.is-super-effective{animation:super-hit .5s steps(3,end)}
+    @keyframes attack-lunge{50%{transform:translate(14px,-5px) scale(1.08)}}
+    @keyframes hit-flash{50%{filter:brightness(2) sepia(1) saturate(4);transform:translateX(-7px)}}
+    @keyframes super-hit{50%{box-shadow:0 0 0 5px #f0c665,0 0 18px #f0c665;filter:brightness(1.18)}}
+    @keyframes knockout{to{opacity:.35;filter:grayscale(1);transform:translateY(12px)}}
+    @media(max-width:600px){.battle-fighters{grid-template-columns:1fr}.fighter{min-height:125px}.move-grid{gap:7px}.move-area{padding:10px}.move-button{min-height:68px;padding:7px}.move-name{font-size:7px}}
+    @media(prefers-reduced-motion:reduce){.fighter,.fighter img,.bar>span,.move-button{transition:none}.fighter.is-attacking img,.fighter.is-hit img,.fighter.is-super-effective,.fighter.is-defeated{animation:none}}

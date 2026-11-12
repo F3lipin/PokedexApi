@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokédex Retrô</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+      <div class="shell"> 
+      <div class="frame"> 
+      <header class="top"> 
+      <div class="brand"> <span class="ball" aria-hidden="true"></span> 
+      <div> 
+      <div class="pixel">POKÉDEX</div>
+       
+      <div class="">EDIÇÃO RETRÔ • EXPLORE O MUNDO POKÉMON</div>
+       </div>
+       </div>
+       
+      <nav aria-label="Navegação principal">
+      <button class="navbtn pixel active" data-view="home" type="button">INÍCIO</button>
+       
+      <button class="navbtn pixel" data-view="list" type="button">POKÉDEX</button>
+       
+      <button class="navbtn pixel" data-view="compare" type="button">COMPARAR</button>
+       
+      <button class="navbtn pixel" data-view="battle" type="button">BATALHA</button>
+       </nav>
+       </header>
+       
+      <main class="screen"> 
+      <div id="message" role="status" aria-live="polite" class="notice hidden"></div>
+       
+      <section id="home" class="section active" aria-labelledby="home-title"> 
+      <div class="hero"> 
+      <div class="panel"> 
+      <p class="pixel eyebrow">▸ BEM-VINDO, TREINADOR!</p>
+       
+      <h1 id="home-title" class="pixel title">SUA JORNADA COMEÇA AQUI.</h1>
+       
+      <p class="lead">Descubra espécies, compare atributos e desafie um amigo em uma batalha no mesmo dispositivo.</p>
+       
+      <form id="home-search" class="mt-6"><label class="" for="home-query">Nome ou número do Pokémon</label> 
+      <div class="flex flex-wrap gap-3"> <input id="home-query" class="field flex-1 min-w-[180px]" autocomplete="off" required="" placeholder="Ex.: pikachu ou 25">
+      <button class="btn red" type="submit">BUSCAR →</button>
+       </div>
+       </form>
+       
+      <div class="flex flex-wrap gap-3 mt-6"> 
+      <button class="btn green" data-view="list" type="button">VER POKÉDEX</button>
+      
+      <button class="btn" data-view="battle" type="button">BATALHAR</button>
+      
+      <button class="btn ghost" id="random-btn" type="button">ALEATÓRIO</button>
+       </div>
+       </div>
+       
+      <div class="panel !p-0 overflow-hidden"> 
+      <div class="hero-art"> <img id="featured-sprite" alt="" loading="lazy"> </div>
+       
+      <div class="p-4"> 
+      <p class="pixel eyebrow">★ POKÉMON EM DESTAQUE</p>
+       
+      <div id="featured-name" class="pixel"> Carregando... </div>
+       </div>
+       </div>
+       </div>
+       </section>
+       
+      <section id="list" class="section" aria-labelledby="list-title"> 
+      <h2 id="list-title" class="pixel title">EXPLORAR POKÉDEX</h2>
+       
+      <div class="panel mb-6"> 
+      <div class="grid md:grid-cols-[2fr_1fr_auto] gap-4 items-end"> 
+      <div> <label class="" for="list-query">Pesquisar por nome ou número</label><input id="list-query" class="field" autocomplete="off" placeholder="Digite para pesquisar..."> </div>
+       
+      <div> <label class="" for="type-filter">Filtrar por tipo</label><select id="type-filter" class="field"><option value="">Todos os tipos</option></select> </div>
+      
+      <button id="favorites-filter" class="btn ghost" type="button" aria-pressed="false">☆ FAVORITOS</button>
+       </div>
+       
+      <p id="list-count" class="mt-4 mb-0 text-sm font-bold" aria-live="polite"></p>
+       </div>
+       
+      <div id="card-grid" class="cards"></div>
+       
+      <div class="flex justify-center items-center flex-wrap gap-4 mt-7"> 
+      <button id="prev-page" class="btn small" type="button">← ANTERIOR</button>
+      <span id="page-indicator" class="pixel"></span>
+      <button id="next-page" class="btn small" type="button">PRÓXIMA →</button>
+       </div>
+       </section>
+       
+      <section id="detail" class="section" aria-labelledby="detail-title">
+      <button class="btn small ghost mb-6" data-view="list" type="button">← VOLTAR À LISTA</button>
+       
+      <div id="detail-content" class="panel"> 
+      <h2 id="detail-title" class="pixel title">Carregando Pokémon...</h2>
+       </div>
+       </section>
+       
+      <section id="compare" class="section" aria-labelledby="compare-title"> 
+      <h2 id="compare-title" class="pixel title">COMPARAR POKÉMON</h2>
+       
+      <form id="compare-form" class="panel mb-6"> 
+      <div class="grid md:grid-cols-2 gap-4"> 
+      <div> <label class="" for="compare-a">Pokémon 1</label><input id="compare-a" class="field" required="" placeholder="Nome ou número"> </div>
+       
+      <div> <label class="" for="compare-b">Pokémon 2</label><input id="compare-b" class="field" required="" placeholder="Nome ou número"> </div>
+       </div>
+      
+      <button class="btn green mt-5" type="submit">COMPARAR →</button>
+       </form>
+       
+      <div id="compare-results" class="compare-cols" aria-live="polite"></div>
+       </section>
+       
+      <section id="battle" class="section" aria-labelledby="battle-title"> 
+      <h2 id="battle-title" class="pixel title">BATALHA LOCAL ⚡</h2>
+       
+      <p class="mb-5">Dois jogadores, um dispositivo. Escolham seus Pokémon e alternem os turnos!</p>
+       
+      <form id="battle-form" class="panel mb-6"> 
+      <div class="grid md:grid-cols-2 gap-4"> 
+      <div> <label class="" for="fighter-a">Jogador 1 • Pokémon</label><input id="fighter-a" class="field" required="" value="pikachu"> </div>
+       
+      <div> <label class="" for="fighter-b">Jogador 2 • Pokémon</label><input id="fighter-b" class="field" required="" value="bulbasaur"> </div>
+       </div>
+      
+      <button class="btn red mt-5" type="submit">INICIAR BATALHA</button>
+       </form>
+       
+      <div id="arena" class="battle-stage hidden"> 
+      <div id="fighters" class="battle-fighters"></div>
+       
+      <div id="turn-label" class="pixel my-5" aria-live="polite"></div>
+       
+      <div id="move-area" class="move-area">
+      <h3 class="pixel move-heading">ESCOLHA UM GOLPE</h3>
+      <div id="move-grid" class="move-grid" aria-label="Golpes disponíveis"></div>
+      <aside id="move-info" class="move-info" aria-live="polite">Passe o cursor ou foque um golpe para ver seus detalhes.</aside>
+      </div>
+       
+      <div id="battle-log" class="log" role="log" aria-live="polite"></div>
+      <div class="flex justify-center mt-5">
+      <button id="restart" class="btn ghost" type="button">NOVA BATALHA ↻</button>
+      </div>
+       </div>
+       </section>
+       </main>
+       
+      <footer class="footer"> <span class="">FEITO PARA TREINADORES • Dados fornecidos pela PokéAPI. Pokémon pertence aos seus respectivos criadores.</span> </footer>
+       </div>
+       </div>
+      
+</body>
+</html>
